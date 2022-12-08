@@ -13,7 +13,7 @@ class Game {
     }
   
     setup() {
-      createCanvas(200+100, 400);
+      createCanvas(200+100, height);
       rectMode(CENTER);
       this.shape = new Shape(10,10);
       this.nextShape = new Shape(width-70, 50);
@@ -63,7 +63,7 @@ class Game {
   
     displaySideBoard() {
       fill('#222222');
-      rect(width-50, height/2, 100, 400);
+      rect(width-50, height/2, 100, height);
       this.nextShape.draw()
       fill(130)
       textSize(15)
@@ -75,8 +75,8 @@ class Game {
       noFill();
       stroke(180)
       strokeWeight(0.1)
-      for (let y = 10; y < 400; y += 20) {
-        for (let x = 10; x < 200; x += 20) {
+      for (let y = 10; y < height; y += 20) {
+        for (let x = 10; x < width-100; x += 20) {
           rect(x, y, 20, 20);
         }
       }

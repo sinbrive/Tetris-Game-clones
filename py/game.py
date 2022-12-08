@@ -62,7 +62,7 @@ class Game:
 
   def displaySideBoard(self):
     fill('#222222')
-    rect(width-50, height/2, 100, 400)
+    rect(width-50, height/2, 100, height)
     self.nextShape.draw()
     fill(130)
     textSize(15)
@@ -74,8 +74,8 @@ class Game:
     noFill()
     stroke(180)
     strokeWeight(0.1)
-    for y in range(10, 400, 20):
-      for x in range(10, 200, 20):
+    for y in range(10, height, 20):
+      for x in range(10, width-100, 20):
         rect(x, y, 20, 20)
       
     
@@ -88,7 +88,7 @@ class Game:
     
   def checkUpdateScore(self):
     for i in range(len(self.lines)):
-      row = 400 - i * 20 - 10
+      row = height - i * 20 - 10
       count=0
       for item in self.lines:
         if item.y == row:
