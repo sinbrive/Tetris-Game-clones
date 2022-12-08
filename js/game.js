@@ -13,7 +13,7 @@ class Game {
     }
   
     setup() {
-      createCanvas(200+100, height);
+      createCanvas(200+100, 400);
       rectMode(CENTER);
       this.shape = new Shape(10,10);
       this.nextShape = new Shape(width-70, 50);
