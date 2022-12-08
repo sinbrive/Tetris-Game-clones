@@ -62,19 +62,11 @@ class Shape:
   
 
   def maxY(self):
-    largest = 0
-    for elem in self.p:
-      if largest < elem.y:
-        largest = elem.y
-    return largest
+    return max([o.y for o in self.p])
   
 
   def getNbX(self):
-    largest = 0
-    for elem in self.p:
-      if largest < elem.x:
-        largest = elem.x
-    return largest + 1
+    return max([o.x for o in self.p])+1
 
   def xOutRightSide(self,limit):
     for i in range(len(self.p)):
