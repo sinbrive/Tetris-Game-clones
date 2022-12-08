@@ -77,9 +77,6 @@ class Game:
     for y in range(10, height, 20):
       for x in range(10, width-100, 20):
         rect(x, y, 20, 20)
-      
-    
-  
 
   def lockCurrentShape(self):  
     arr = self.shape.getRealCoords()
@@ -89,21 +86,18 @@ class Game:
   def checkUpdateScore(self):
     for i in range(len(self.lines)):
       row = height - i * 20 - 10
-      count=0
-      for item in self.lines:
-        if item.y == row:
-          count+=1
+      count=len(list(filter((lambda item : item.y == row), self.lines)))
       if count == 10:
         self.removeLine(row)
         self.score+=20
         if self.score > self.points_per_level*self.level:
           self.score=0
           self.level+=1
-    for item in self.lines:
-      if item.y < 30:
-        self.game_over= True
         return
-  
+    for item in self.lines:
+      if item.y < 60:
+        self.game_over = True
+        return
 
   def removeLine(self,row):
     self.lines = list(filter(lambda item: item.y != row, self.lines))
