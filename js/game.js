@@ -91,7 +91,7 @@ class Game {
   
     checkUpdateScore(){
       for (let i = 0; i < this.lines.length; i++) {
-        let row = 400 - i * 20 - 10;
+        let row = height - i * 20 - 10;
         const count = this.lines.filter(item => item.y === row).length;
         if (count == 10) {
           this.removeLine(row);
