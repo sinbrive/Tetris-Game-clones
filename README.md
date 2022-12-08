@@ -1,2 +1,2 @@
-# Clone of Tetris in JS and PyProcessing
+# Clones of Tetris in P5.js and PyProcessing
 
