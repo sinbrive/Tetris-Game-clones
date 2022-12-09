@@ -69,7 +69,6 @@ class Game:
         if self.score > self.points_per_level*self.level:
           self.score=0
           self.level+=1
-        return
  
   def removeLine(self,row):
     self.lines = list(filter(lambda item: item.y != row, self.lines))
