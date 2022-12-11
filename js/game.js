@@ -100,6 +100,7 @@ class Game {
             this.score=0;
             this.level++;
           }
+          return
         }
       }
       const over = this.lines.filter(item => item.y < 30).length;
