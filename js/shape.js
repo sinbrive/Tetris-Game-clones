@@ -1,7 +1,8 @@
-let tetrominoes=[I_, O_, T_, J_, L_, S_, Z_];  
-let colrs=['#ff0000','#00ff00','#0000ff','#ffff00',  
-                                '#ff00ff','#00ffff', '#ffffff']; // ex cols
 
+let tetrominoes=[t_I, t_O,  t_T, t_S, t_Z, t_J,t_L]  
+
+let colrs=['#00ffff','#ffff00','#800080','#00ff00',  
+                                '#ff0000','#0000ff', '#ffA500'] 
 
 class Shape {
   constructor(x, y) {

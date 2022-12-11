@@ -1,10 +1,10 @@
 from tetrominoes import *
 import random
  
-tetrominoes=[t_I, t_O, t_J, t_L, t_S, t_Z, t_T]  
+tetrominoes=[t_I, t_O,  t_T, t_S, t_Z, t_J,t_L]  
 
-colrs=['#ff0000','#00ff00','#0000ff','#ffff00',  
-                                '#ff00ff','#00ffff', '#fffefe'] 
+colrs=['#00ffff','#ffff00','#800080','#00ff00',  
+                                '#ff0000','#0000ff', '#ffA500'] 
 
 
 class Shape:
