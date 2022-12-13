@@ -75,11 +75,8 @@ class Game {
       noFill();
       stroke(180)
       strokeWeight(0.1)
-      for (let y = 10; y < height; y += 20) {
-        for (let x = 10; x < width-100; x += 20) {
-          rect(x, y, 20, 20);
-        }
-      }
+      let s = new Array(20).fill('').map(e => Array(10).fill(''));
+      s.forEach((y, j) => y.forEach((_, i) => rect(20*i+10, 20*j+10, 20,20)));
     }
   
     lockCurrentShape() {  
@@ -144,15 +141,7 @@ class Game {
       }
     
       if (key == UP_ARROW) {
-        let save =this.rotIndex;
-        this.rotIndex++;
-        this.rotIndex = this.rotIndex % 4;
-        // disable rotation to prevent overflow
-        this.shape.rotate(this.rotIndex);
-        if (this.shape.xOutRightSide(width-100)) {
-          this.rotIndex = save;
-        }
-        this.shape.rotate(this.rotIndex);
+        this.shape.rotate(width-100);
       }   
     }
   

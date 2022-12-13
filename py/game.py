@@ -129,13 +129,4 @@ class Game:
     
   
     if (key == UP):
-      save =self.rotIndex
-      self.rotIndex+=1
-      self.rotIndex = self.rotIndex % 4
-      # disable rotation to prevent overflow
-      self.shape.rotate(self.rotIndex)
-      if (self.shape.xOutRightSide(width-100)):
-        self.rotIndex = save
-      
-      self.shape.rotate(self.rotIndex)
-       
+      self.shape.rotate(width-100)
